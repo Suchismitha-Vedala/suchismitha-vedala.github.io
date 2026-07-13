@@ -1,5 +1,5 @@
 :root {
-  --bg: #f4f2ee;
+  --bg: #f6f6f2;
   --panel: #ffffff;
   --panel-soft: #faf9f6;
   --ink: #151515;
@@ -9,7 +9,7 @@
   --line-soft: rgba(21, 21, 21, 0.08);
   --accent: #0f5d4f;
   --accent-soft: #dfece6;
-  --clay: #9b6a44;
+  --clay: #7a6550;
   --slate: #263433;
   --max: 1180px;
   --gutter: clamp(20px, 4.5vw, 58px);
@@ -29,8 +29,8 @@ html {
 body {
   margin: 0;
   background:
-    linear-gradient(90deg, rgba(15, 93, 79, 0.035) 1px, transparent 1px),
-    linear-gradient(rgba(15, 93, 79, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 93, 79, 0.028) 1px, transparent 1px),
+    linear-gradient(rgba(122, 101, 80, 0.026) 1px, transparent 1px),
     var(--bg);
   background-size: 72px 72px;
   color: var(--ink);
@@ -99,7 +99,7 @@ h3 {
   max-width: var(--max);
   margin: 0 auto;
   padding: 16px var(--gutter);
-  background: rgba(244, 242, 238, 0.88);
+  background: rgba(246, 246, 242, 0.9);
   border-bottom: 1px solid transparent;
   backdrop-filter: blur(18px);
   transition: border-color 180ms ease, box-shadow 180ms ease;
@@ -175,7 +175,7 @@ h3 {
 .eyebrow,
 .section-kicker,
 .panel-title,
-.operating-layer span,
+.architecture-panel span,
 .system-map span,
 .contact-links span {
   margin-bottom: 14px;
@@ -234,7 +234,7 @@ h3 {
   background: #0b4c40;
 }
 
-.operating-layer {
+.architecture-panel {
   position: relative;
   padding: clamp(22px, 3vw, 30px);
   border: 1px solid var(--line);
@@ -243,7 +243,7 @@ h3 {
   box-shadow: var(--shadow);
 }
 
-.operating-layer::before {
+.architecture-panel::before {
   content: "";
   position: absolute;
   inset: 14px;
@@ -308,7 +308,7 @@ h3 {
   line-height: 1.48;
 }
 
-.leadership-grid {
+.platform-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
@@ -318,18 +318,18 @@ h3 {
   overflow: hidden;
 }
 
-.leadership-grid article,
+.platform-grid article,
 .system-map article,
 .agent-list article,
 .principles article {
   background: rgba(255, 255, 255, 0.74);
 }
 
-.leadership-grid article {
+.platform-grid article {
   padding: clamp(24px, 3vw, 34px);
 }
 
-.leadership-grid p,
+.platform-grid p,
 .system-map p,
 .agent-list p,
 .principles p {
@@ -378,24 +378,24 @@ h3 {
   border-radius: var(--radius);
 }
 
-.operating-model {
+.economics {
   background: #101817;
   color: #f7f5ef;
   max-width: none;
 }
 
-.operating-model > * {
+.economics > * {
   max-width: var(--max);
   margin-left: auto;
   margin-right: auto;
 }
 
-.operating-model .section-kicker {
+.economics .section-kicker {
   color: #93c8b8;
 }
 
-.operating-model .split-intro p,
-.operating-model .principles p {
+.economics .split-intro p,
+.economics .principles p {
   color: rgba(247, 245, 239, 0.72);
 }
 
@@ -478,11 +478,11 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .operating-layer {
+  .architecture-panel {
     max-width: 680px;
   }
 
-  .leadership-grid,
+  .platform-grid,
   .system-map,
   .principles {
     grid-template-columns: repeat(2, 1fr);
@@ -557,7 +557,7 @@ h3 {
   }
 
   .hero-actions,
-  .leadership-grid,
+  .platform-grid,
   .system-map,
   .principles,
   .contact-links a {
