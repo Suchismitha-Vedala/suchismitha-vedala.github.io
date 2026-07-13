@@ -265,63 +265,59 @@ h3 {
   min-width: 0;
 }
 
-.portrait-frame {
-  position: relative;
-  overflow: hidden;
+.architecture-panel {
+  padding: clamp(18px, 2.6vw, 28px);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: var(--surface);
+  background:
+    linear-gradient(135deg, rgba(31, 95, 75, 0.1), transparent 38%),
+    rgba(255, 255, 255, 0.82);
   box-shadow: var(--shadow);
 }
 
-.portrait-frame::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border: 10px solid rgba(255, 255, 255, 0.36);
-  pointer-events: none;
+.architecture-head {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line-soft);
 }
 
-.portrait {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  filter: saturate(0.96) contrast(1.02);
+.architecture-head span,
+.architecture-stack span {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--green);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
-.system-map {
+.architecture-head strong {
+  display: block;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(1.55rem, 2.7vw, 2.45rem);
+  font-weight: 600;
+  line-height: 1.02;
+}
+
+.architecture-stack {
   display: grid;
   gap: 10px;
-  padding: 18px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.76);
-  box-shadow: 0 16px 42px rgba(24, 31, 28, 0.08);
+  padding-top: 18px;
 }
 
-.map-node,
-.map-row span {
-  display: grid;
-  place-items: center;
-  min-height: 42px;
+.architecture-stack div {
+  padding: 16px;
   border: 1px solid var(--line-soft);
-  border-radius: 6px;
-  background: var(--surface);
-  color: var(--muted);
-  font-size: 0.82rem;
-  font-weight: 800;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.78);
 }
 
-.map-node.is-primary {
-  min-height: 50px;
-  background: var(--green);
-  color: #fff;
-}
-
-.map-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+.architecture-stack strong {
+  display: block;
+  color: var(--ink);
+  font-size: 0.94rem;
+  line-height: 1.36;
 }
 
 .credibility {
@@ -643,7 +639,6 @@ h3 {
   }
 
   .hero-actions,
-  .map-row,
   .credibility,
   .scope-grid,
   .work-list article,
